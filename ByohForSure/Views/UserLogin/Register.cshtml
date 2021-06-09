@@ -1,0 +1,95 @@
+﻿<div class="grid_3" id="RegisterDiv">
+    <div class="container">
+        <div class="breadcrumb1">
+            <ul>
+                <a href="index.html"><i class="fa fa-home home_1"></i></a>
+                <span class="divider">&nbsp;|&nbsp;</span>
+                <li class="current-page">Register</li>
+            </ul>
+        </div>
+        <div class="services">
+            <div class="col-sm-6 login_left">
+                <form>
+                    <div class="form-group">
+                        <label for="edit-name">Username <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" id="edit-name" name="name" v-model="UserName"  value="" size="60" maxlength="60" class="form-text required">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="password" id="edit-pass" name="pass" v-model="UserPassword" size="60" maxlength="128" class="form-text required">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-name">Email <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" id="edit-email" name="name" v-on:blur="CheckEmailExist" v-model="UserEmail" size="60" maxlength="60" class="form-text required">
+                    </div>
+                    <div class="age_select">
+                        <label for="edit-pass">Age <span class="form-required" title="This field is required.">*</span></label>
+                        <div class="age_grid">
+                            <div class="col-sm-4 form_box">
+                                <div class="select-block1">
+                                    <select v-model="AgeDate">
+                                      
+                                        <option v-for="age in 31" :value="age">{{age}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 form_box2">
+                                <div class="select-block1">
+                                    <select v-model="AgeMonth">
+                                        <option value="">January</option>
+                                        <option value="">February</option>
+                                        <option value="">March</option>
+                                        <option value="">April</option>
+                                        <option value="">May</option>
+                                        <option value="">June</option>
+                                        <option value="">July</option>
+                                        <option value="">August</option>
+                                        <option value="">September</option>
+                                        <option value="">October</option>
+                                        <option value="">November</option>
+                                        <option value="">December</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 form_box1">
+                                <div class="select-block1">
+                                    <select v-model="AgeYear">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group1">
+                        <label class="col-sm-7 control-lable" for="sex">Sex : </label>
+                        <div class="col-sm-5">
+                            <div class="radios">
+                                <label for="radio-01" class="label_radio">
+                                    <input type="radio" value="Male" v-model="Gender"> Male
+                                </label>
+                                <label for="radio-02" class="label_radio">
+                                    <input type="radio" v-model="Gender" value="Female"> Female
+                                </label>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="form-actions">
+                        <input type="button" id="edit-submit" name="" value="Submit" class="btn_1 submit">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <ul class="sharing">
+                    <li><a href="#" class="facebook" title="Facebook"><i class="fa fa-boxed fa-fw fa-facebook"></i> Share on Facebook</a></li>
+                    <li><a href="#" class="twitter" title="Twitter"><i class="fa fa-boxed fa-fw fa-twitter"></i> Tweet</a></li>
+                    <li><a href="#" class="google" title="Google"><i class="fa fa-boxed fa-fw fa-google-plus"></i> Share on Google+</a></li>
+                    <li><a href="#" class="linkedin" title="Linkedin"><i class="fa fa-boxed fa-fw fa-linkedin"></i> Share on LinkedIn</a></li>
+                    <li><a href="#" class="mail" title="Email"><i class="fa fa-boxed fa-fw fa-envelope-o"></i> E-mail</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<script src="~/controllers/Register.js" asp-append-version="true"></script>
