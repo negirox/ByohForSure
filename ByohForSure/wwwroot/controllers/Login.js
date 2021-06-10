@@ -31,7 +31,7 @@ var LoginVueObj=new Vue({
                     hideClass: {
                         popup: 'animate__animated animate__fadeOutUp'
                     }
-                })
+                });
             }
         }
     }
